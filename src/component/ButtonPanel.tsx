@@ -3,11 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./ButtonPanel.css";
 
-interface ButtonPanelProps {
-  clickHandler: (name: string) => void;
-}
-
-export default class ButtonPanel extends React.Component<ButtonPanelProps> {
+export default class ButtonPanel extends React.Component {
   static propTypes = {
     clickHandler: PropTypes.func,
   };

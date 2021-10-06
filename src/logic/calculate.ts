@@ -1,8 +1,7 @@
 import Big from "big.js";
-
 import operate from "./operate";
 import isNumber from "./isNumber";
-import { AppState } from "../component/App";
+
 /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -12,7 +11,7 @@ import { AppState } from "../component/App";
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-export default function calculate(obj: AppState, buttonName: string): AppState {
+export default function calculate(obj, buttonName) {
   if (buttonName === "AC") {
     return {
       total: null,

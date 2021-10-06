@@ -2,12 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Display.css";
 
-interface DisplayProps {
-  value: string;
-}
-
-
-export default class Display extends React.Component<DisplayProps> {
+export default class Display extends React.Component {
   static propTypes = {
     value: PropTypes.string,
   };
