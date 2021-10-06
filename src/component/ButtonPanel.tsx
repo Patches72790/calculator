@@ -1,15 +1,18 @@
 import Button from "./Button";
 import React from "react";
 import PropTypes from "prop-types";
-
 import "./ButtonPanel.css";
 
-export default class ButtonPanel extends React.Component {
+interface ButtonPanelProps {
+  clickHandler: (name: string) => void;
+}
+
+export default class ButtonPanel extends React.Component<ButtonPanelProps> {
   static propTypes = {
     clickHandler: PropTypes.func,
   };
 
-  handleClick = buttonName => {
+  handleClick = (buttonName: string) => {
     this.props.clickHandler(buttonName);
   };
 

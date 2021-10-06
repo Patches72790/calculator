@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Button.css";
 
-export default class Button extends React.Component {
+interface ButtonProps {
+  name: string;
+  orange?: boolean;
+  wide?: boolean;
+  clickHandler: (name: string) => void;
+}
+
+export default class Button extends React.Component<ButtonProps> {
   static propTypes = {
     name: PropTypes.string,
     orange: PropTypes.bool,
