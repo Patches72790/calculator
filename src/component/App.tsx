@@ -4,13 +4,13 @@ import ButtonPanel from "./ButtonPanel";
 import calculate from "../logic/calculate";
 import "./App.css";
 
-interface AppState {
-  total: number;
-  next: number;
-  operation: number;
+export interface AppState {
+  total?: string|null;
+  next?: string|null;
+  operation?: string|null;
 }
 
-export default class App extends React.Component<AppState> {
+export default class App extends React.Component<{}, AppState> {
   state = {
     total: null,
     next: null,
